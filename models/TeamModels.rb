@@ -1,3 +1,4 @@
+require 'pry'
 class Team
 
   attr_reader :name
@@ -16,7 +17,7 @@ class Team
     end
   end
 
-  def all_teams
+  def self.all
     @@all
   end
 
@@ -40,11 +41,14 @@ class Team
     end
   end
 
-  def find_team(team_name)
-    x=all_teams.find do |team|
+  def self.find_team(team_name)
+    self.all.find do |team|
       team.name==team_name
     end
+
   end
+
+  # binding.pry
 
 
 

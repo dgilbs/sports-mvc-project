@@ -18,9 +18,9 @@ class Player
     end
   end
 
-  def find_player(player_name)
+  def self.find_player(player_name)
     self.all.find do |player|
-      player.name==self.name
+      player.name==player_name
     end
   end
 
