@@ -1,7 +1,6 @@
 class PlayerController
   def see
-    puts "What player do you want to see?"
-    player_request=gets.chomp
+    player_request=SeePlayerView.new.render
     player=Player.find_player(player_request)
     puts "#{player.name} plays for #{player.team.name}."
   end
@@ -13,8 +12,6 @@ class PlayerController
     puts "What team does he play for?"
     team=Team.find_team(gets.chomp)
     team.add_player(player)
-    puts "#{player.name} now plays for #{team.name}"
-    puts "Their new roster is:"
-    team.list_roster
+    UpdatedRosterView.new.render(player, team)
   end
 end

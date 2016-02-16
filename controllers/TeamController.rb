@@ -3,7 +3,7 @@ class TeamController
     puts "What is the name of your new team?"
     response=gets.chomp
     new_team=Team.new(response)
-    puts "Congrats! You have created #{new_team.name}. What player would you like to add?"
+    puts "Congrats! You have created #{new_team.name}."
   end
 
   def see

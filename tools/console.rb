@@ -24,22 +24,28 @@ while action != "exit"
           controller.create
         when "U"
           controller.add_player
-          #add a new team
         when "D"
           #remove an existing team
       end
     when "player"
-      puts "Do you want to see a player or create a player?"
+      puts "Do you want to see a player(S) or create a player(C)?"
       action=gets.chomp
+      controller=PlayerController.new
       case action
-        when "see"
-          controller=PlayerController.new
+        when "S"
           controller.see
-        when "create"
-          controller=PlayerController.new
+        when "C"
           controller.create
       end
-
+    when "coach"
+      controller=CoachController.new
+      controller.see
+      # puts "Which coach would you like to see?"
+      # action=gets.chomp
+      # found_coach=Coach.all.find do |coach|
+      #   coach.name==action
+      # end
+      # puts "#{found_coach.name} is the coach for #{found_coach.team.name}."
   
 
   end
