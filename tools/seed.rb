@@ -10,6 +10,8 @@ require_relative '../environment.rb'
 
 ManU=Team.new("Manchester United")
 Arsenal=Team.new("Arsenal")
+ManC=Team.new("Machester City")
+Liverpool=Team.new("Liverpool")
 
 APlayers=["Petr Cech", "Kieran Gibbs", "Aaron Ramsey", "Theo Walcott"]
 APlayers.each do |player|
