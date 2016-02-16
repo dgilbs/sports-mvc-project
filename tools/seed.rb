@@ -8,33 +8,45 @@ require_relative '../environment.rb'
 # Ramsey=Player.new("Aaron Ramsey")
 # Walcott=Player.new("Theo Walcott")
 
-ManU=Team.new("Manchester United")
-Arsenal=Team.new("Arsenal")
-ManC=Team.new("Machester City")
-Liverpool=Team.new("Liverpool")
+man_u=Team.new("Manchester United")
+arsenal=Team.new("Arsenal")
+man_c=Team.new("Manchester City")
+liverpool=Team.new("Liverpool")
 
-APlayers=["Petr Cech", "Kieran Gibbs", "Aaron Ramsey", "Theo Walcott"]
-APlayers.each do |player|
+a_players=["Petr Cech", "Kieran Gibbs", "Aaron Ramsey", "Theo Walcott"]
+a_players.each do |player|
   x=Player.new(player)
-  Arsenal.add_player(x)
+  arsenal.add_player(x)
   
 end
 
-MUPlayers=["David De Gea", "Wayne Rooney", "Memphis Depay", "Bastian Schweinsteiger"]
-MUPlayers.each do |player|
+mu_players=["David De Gea", "Wayne Rooney", "Memphis Depay", "Bastian Schweinsteiger"]
+mu_players.each do |player|
   x=Player.new(player)
-  ManU.add_player(x)
+  man_u.add_player(x)
   
 end
 
+mc_players=["Joe Hart", "Vincent Kompany", "Sergio Aguero", "Pablo Zabaleta"]
+mc_players.each do |player|
+  x=Player.new(player)
+  man_c.add_player(x)
+end
 
-Louis=Coach.new("Louis Van Gaal")
-Wegner=Coach.new("Arsense Wegner")
+l_players=["Simon Mingolet", "Jordan Henderson", "Adam Lallana", "Kolo Toure"]
+l_players.each do |player|
+  liverpool.add_player(Player.new(player))
+end
 
 
 
-Arsenal.hire_coach(Wegner)
-ManU.hire_coach(Louis)
+louis=Coach.new("Louis Van Gaal")
+wegner=Coach.new("Arsense Wegner")
+
+
+
+arsenal.hire_coach(wegner)
+man_u.hire_coach(louis)
 
 
 

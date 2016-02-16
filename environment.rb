@@ -1,6 +1,7 @@
 require_relative 'controllers/PlayerController'
 require_relative 'controllers/TeamController'
 require_relative 'controllers/CoachController'
+require_relative 'controllers/UserController'
 require_relative 'models/CoachModel.rb'
 require_relative 'models/TeamModels.rb'
 require_relative 'models/PlayerModel.rb'

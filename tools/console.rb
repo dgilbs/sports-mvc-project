@@ -6,12 +6,14 @@ def reload!
   load("../environment.rb")
 end 
 
+Pry.start 
 
 action=nil
 while action != "exit"
   # puts "What stats would you like to see: a team, a player, or a coach?"
   # action=gets.chomp
-  action=OptionView.new.render
+  menu=UserController.new
+  action=menu.render
   case action
     when "team"
       puts "Do you want to see(S), create(C), update(U), or delete(D)?"
