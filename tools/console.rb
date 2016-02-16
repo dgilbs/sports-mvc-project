@@ -40,14 +40,6 @@ while action != "exit"
     when "coach"
       controller=CoachController.new
       controller.see
-      # puts "Which coach would you like to see?"
-      # action=gets.chomp
-      # found_coach=Coach.all.find do |coach|
-      #   coach.name==action
-      # end
-      # puts "#{found_coach.name} is the coach for #{found_coach.team.name}."
-  
-
   end
 end
   
